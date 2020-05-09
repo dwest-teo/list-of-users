@@ -1,5 +1,5 @@
 // @flow
-import React, { Fragment, memo, type Node } from 'react';
+import React, { memo, type Node } from 'react';
 import Header from './header';
 import Footer from './footer';
 
@@ -8,19 +8,22 @@ type Props = {
 };
 
 const Layout = ({ children }: Props) => (
-  <Fragment>
+  <div className="page-wrapper">
     <Header />
-    <div className="page-wrapper">{children}</div>
+    <div className="page-content">{children}</div>
     <Footer />
 
     <style jsx>{`
       .page-wrapper {
-        min-height: calc(100vh - 203px);
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
       }
+      .page-content {
+        flex: 1;
+      }
     `}</style>
-  </Fragment>
+  </div>
 );
 
 export default memo<*>(Layout);
