@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import Head from 'next/head';
+import withRedux from '../core/redux';
 
 const About = () => (
   <article>
@@ -49,4 +50,6 @@ const About = () => (
   </article>
 );
 
-export default About;
+// although this page doesn't use any data from Redux, I'm still connecting it
+// to the withRedux HOC to account for someone navigating directly to this page
+export default withRedux(About);
