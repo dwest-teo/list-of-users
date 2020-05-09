@@ -5,6 +5,7 @@ type Props = {
   name: string,
   label: string,
 };
+
 const TextInput = ({ name, label, ...rest }: Props) => (
   <Fragment>
     <label htmlFor={name}>{label}</label>

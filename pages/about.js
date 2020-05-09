@@ -10,7 +10,12 @@ const About = () => (
     <h1>About</h1>
     <p>
       This project was built by Donny West for Mad Mobile. Additional details
-      regarding the project are available in the README file in the GitHub repo.
+      regarding the project are available in the README file in the{' '}
+      <a href="https://github.com/dwest-teo/list-of-users">GitHub repo</a>.
+    </p>
+    <p>
+      I enjoyed working on this project, and I appreciate your time reviewing my
+      work!
     </p>
     <style jsx>{`
       article {
@@ -19,6 +24,21 @@ const About = () => (
       p {
         max-width: 30em;
         line-height: 1.5;
+      }
+      a {
+        text-decoration: none;
+        color: #357edd;
+        transition: opacity 0.15s ease-in;
+      }
+      a:hover,
+      a:focus {
+        opacity: 0.5;
+      }
+      a:active {
+        opacity: 0.8;
+      }
+      a:focus {
+        outline: 1px dotted currentColor;
       }
       @media screen and (min-width: 30em) {
         article {

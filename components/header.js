@@ -23,7 +23,7 @@ const Header = () => (
         font-size: 0.875rem;
         color: #fff;
         text-decoration: none;
-        transition: color 0.15s ease-in;
+        transition: opacity 0.15s ease-in;
       }
       a:hover,
       a:focus {

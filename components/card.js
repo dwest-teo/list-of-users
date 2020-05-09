@@ -33,9 +33,9 @@ const Card = ({ name, email, phone, location, picture, login }: CardType) => (
       </a>
     </Link>
     <div className="background">
-      <h1>
+      <h2>
         {name.first} {name.last}
-      </h1>
+      </h2>
     </div>
     <div className="content">
       <Avatar
@@ -78,7 +78,7 @@ const Card = ({ name, email, phone, location, picture, login }: CardType) => (
         left: 0.5rem;
         z-index: 1;
       }
-      h1 {
+      h2 {
         font-size: 1.5rem;
         padding: 1.5rem 0 4rem;
         margin: 0;

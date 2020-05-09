@@ -8,7 +8,7 @@ const Footer = () => (
       <b>UserList</b>, literally just a list of users.
     </small>
     <div className="footer-links">
-      <a href="https://github.com">
+      <a href="https://github.com/dwest-teo/list-of-users">
         <Icon name="github" fill="#fff" size={24} />
         <span>Code on GitHub</span>
       </a>
