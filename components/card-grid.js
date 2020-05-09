@@ -24,13 +24,15 @@ const CardGrid = ({ users }: Users) => {
     // the user object, but ended up explicitly defining each field to search
     // as any other method I tried resulted in pretty poor performance
     const newDisplayUsers = users.filter(user => {
+      const lowerCaseTerm = term.toLowerCase();
+
       if (
-        containsString(term, user.name.first.toLowerCase()) ||
-        containsString(term, user.name.last.toLowerCase()) ||
-        containsString(term, user.email.toLowerCase()) ||
-        containsString(term, user.phone.toLowerCase()) ||
-        containsString(term, user.location.city.toLowerCase()) ||
-        containsString(term, user.location.state.toLowerCase())
+        containsString(lowerCaseTerm, user.name.first.toLowerCase()) ||
+        containsString(lowerCaseTerm, user.name.last.toLowerCase()) ||
+        containsString(lowerCaseTerm, user.email.toLowerCase()) ||
+        containsString(lowerCaseTerm, user.phone.toLowerCase()) ||
+        containsString(lowerCaseTerm, user.location.city.toLowerCase()) ||
+        containsString(lowerCaseTerm, user.location.state.toLowerCase())
       ) {
         return true;
       }
