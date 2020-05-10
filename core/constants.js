@@ -1,5 +1,5 @@
 // Random User API URL
-export const API_URL = 'https://randomuser.me/api/?results=';
+export const API_URL = 'https://randomuser.me/api/?nat=us&results=';
 
 // Number of users to fetch
 export const USER_COUNT = 20;

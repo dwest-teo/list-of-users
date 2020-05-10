@@ -1,6 +1,7 @@
 // @flow
 import React, { memo } from 'react';
 import { useDispatch } from 'react-redux';
+import { useRouter } from 'next/router';
 import useFormInput from '../core/useFormInput';
 import { doModifyUser } from '../core/store/actions';
 import { type CardType } from './card';
@@ -9,6 +10,7 @@ import Button from './button';
 
 const EditForm = ({ name, email, phone, location, ...rest }: CardType) => {
   const dispatch = useDispatch();
+  const router = useRouter();
 
   const { value: firstNameInput, bind: bindFirstNameInput } = useFormInput(
     name.first
@@ -51,11 +53,20 @@ const EditForm = ({ name, email, phone, location, ...rest }: CardType) => {
       <TextInput name="phone" label="Phone" {...bindPhoneInput} />
       <TextInput name="city" label="City" {...bindCityInput} />
       <TextInput name="state" label="State" {...bindStateInput} />
-      <Button type="submit">Submit</Button>
+      <div className="button-container">
+        <Button outline onClick={() => router.push('/')}>
+          Cancel
+        </Button>
+        <Button type="submit">Submit</Button>
+      </div>
 
       <style jsx>{`
         form {
           margin-top: 2rem;
+        }
+        .button-container {
+          display: flex;
+          justify-content: space-between;
         }
         @media screen and (min-width: 30em) {
           form {
