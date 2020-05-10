@@ -2,7 +2,7 @@
 export const API_URL = 'https://randomuser.me/api/?nat=us&results=';
 
 // Number of users to fetch
-export const USER_COUNT = 20;
+export const USER_COUNT = 16;
 
 // Analytics
 export const GOOGLE_ANALYTICS_ID = 'UA-165918392-1';
