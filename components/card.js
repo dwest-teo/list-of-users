@@ -32,12 +32,10 @@ const Card = ({ name, email, phone, location, picture, login }: CardType) => (
         <Icon name="edit" fill="#fff" size={24} viewBox="0 0 512 640" />
       </a>
     </Link>
-    <div className="background">
+    <div className="content">
       <h2>
         {name.first} {name.last}
       </h2>
-    </div>
-    <div className="content">
       <Avatar
         src={picture.medium}
         alt={`${name.first} ${name.last}'s avatar`}
@@ -60,11 +58,13 @@ const Card = ({ name, email, phone, location, picture, login }: CardType) => (
         overflow: hidden;
         text-align: center;
       }
-      .background {
+      article:after {
+        content: ' ';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
+        height: 40%;
         background-color: #357edd;
         z-index: -1;
       }
@@ -80,7 +80,6 @@ const Card = ({ name, email, phone, location, picture, login }: CardType) => (
       }
       h2 {
         font-size: 1.5rem;
-        padding: 1.5rem 0 4rem;
         margin: 0;
         color: #fff;
         line-clamp: 1;
@@ -92,6 +91,12 @@ const Card = ({ name, email, phone, location, picture, login }: CardType) => (
         margin: 0.5rem 0;
       }
       @media screen and (min-width: 30em) {
+        article {
+          max-width: calc(50% - 1rem);
+          flex-basis: calc(50% - 1rem);
+        }
+      }
+      @media screen and (min-width: 45em) {
         article {
           max-width: calc(33% - 1rem);
           flex-basis: calc(33% - 1rem);

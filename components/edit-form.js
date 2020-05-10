@@ -1,6 +1,7 @@
 // @flow
 import React, { memo } from 'react';
 import { useDispatch } from 'react-redux';
+// $FlowFixMe -- the nextjs flowtype doesn't include this export, silencing error
 import { useRouter } from 'next/router';
 import useFormInput from '../core/useFormInput';
 import { doModifyUser } from '../core/store/actions';
