@@ -20,8 +20,8 @@ export default class MyDocument extends Document {
           <meta httpEquiv="x-dns-prefetch-control" content="on" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <link rel="manifest" href="/manifest.json" />
-          <meta name="apple-mobile-web-app-title" content="dirtnapp" />
-          <meta name="application-name" content="dirtnapp" />
+          <meta name="apple-mobile-web-app-title" content="UserList" />
+          <meta name="application-name" content="UserList" />
           <meta name="msapplication-TileColor" content="#357edd" />
           <meta name="theme-color" content="#fff" />
           <link rel="shortcut icon" href="/favicon.ico" />
